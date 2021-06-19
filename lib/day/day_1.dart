@@ -7,14 +7,14 @@ class Day1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            colors: [Colors.blue, Colors.lightBlue],
-          )),
+          decoration:   BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Colors.blueAccent.shade400, Colors.lightBlue],
+            ),
+          ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: const [
@@ -23,16 +23,30 @@ class Day1 extends StatelessWidget {
                   ),
                 ],
               ),
-              Column(
-                
-                children: const  [
-                  Text(
-                    "Welcome",
-                  ),
-                  Text(
-                    "Sign Up to get Started",
-                  ),
-                ],
+              const SizedBox(height: 50,),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: const [
+                    Text(
+                      "Welcome!",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 22,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Text(
+                      "Sign Up to get Started",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 12,
+                        color: Colors.white54,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           )),
